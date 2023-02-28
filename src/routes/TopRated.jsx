@@ -16,7 +16,6 @@ export default function TopRated() {
 
     const tmdb = new tmdbGetApi();
     const fetchAllTopRatedMovies = async () => {
-        
         const data = await tmdb.getAllList("movie", "top_rated", 322);
         console.log(data?.results);
         setMovies(data?.results);
