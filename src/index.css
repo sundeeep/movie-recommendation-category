@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*::after,
+*,
+*::before{
+    font-family: 'Poppins', 'Roboto', 'Open Sans';
+    font-weight: 400;
+}

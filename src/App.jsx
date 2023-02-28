@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import tmdbGetApi from './tmdb-helpers/tmdb.endpoints.js'
-import CardSkeletonUI from './components/SkeletonUI/CardSkeletonUI';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './routes/Home';
+import TopRated from './routes/TopRated';
+import Upcoming from './routes/Upcoming';
+import Popular from './routes/Popular';
+import Discover from './routes/Discover';
+import Dashboard from './routes/Dashboard';
+
 function App() {
 
-  const [allMovies, setAllMovies] = useState();
-
-  useEffect(() => {
-    fetchAllMovies()
-  }, [])
-  
-  const tmdb = new tmdbGetApi();
-  const fetchAllMovies = async() => {
-    const data = await tmdb.getGenreList("movie");
-    console.log(data)
-    const genres = data.genres;
-    setAllMovies(data?.genres);
-  }
-  
   return (
-    <div>
-      <CardSkeletonUI />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}>
+          <Route path='/top-rated' element={<TopRated />}/>
+          <Route path='/upcoming' element={<Upcoming />}/>
+          <Route path='/popular' element={<Popular />}/>
+          <Route path='/discover' element={<Discover />}/>
+          <Route path='/dashboard' element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
