@@ -8,3 +8,7 @@
     font-family: 'Poppins', 'Roboto', 'Open Sans';
     font-weight: 400;
 }
+
+body{
+    overflow-x: hidden;
+}

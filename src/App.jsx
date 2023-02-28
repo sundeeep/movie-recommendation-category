@@ -12,12 +12,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}>
-          <Route path='/top-rated' element={<TopRated />}/>
           <Route path='/upcoming' element={<Upcoming />}/>
           <Route path='/popular' element={<Popular />}/>
           <Route path='/discover' element={<Discover />}/>
           <Route path='/dashboard' element={<Dashboard />} />
         </Route>
+        <Route path='/top-rated' element={<TopRated />}/>
       </Routes>
     </BrowserRouter>
   )

@@ -1,8 +1,26 @@
 .skeleton__Card{
     height: 300px;
-    width: 250px;
+    width: 200px;
     border-radius: .25rem;
     position: relative;
+    background-color: hsl(199.53,18.30%,46.08%);
+    animation-name: ImageLoader;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ImageLoader {
+    0%{
+        background: linear-gradient(to bottom, #EFF54D, #00AC61);
+    }
+    50%{
+        background: linear-gradient(to bottom, #FED54A, #FF9347);
+    }
+    100%{
+        background: linear-gradient(to bottom, #DB0B5F, #6F00ED);
+    }
 }
 
 .skeleton__Text{
@@ -10,7 +28,6 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    flex-basis: 100%;
     position: absolute;
     bottom: 0;
     left: 0;

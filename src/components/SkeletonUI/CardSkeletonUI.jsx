@@ -1,8 +1,9 @@
 import React from 'react'
-import './SkeletonUI.css';
+import './CardSkeletonUI.css';
+
 const SkeletonUI = () => {
     return (
-        <article className='skeleton__Card'>
+        <article className='skeleton__Card blur-sm z-30'>
             <div className='skeleton__Text'>
                 <h3 className='skeleton__Heading'></h3>
                 <p className='skeleton__Paragraph'></p>
