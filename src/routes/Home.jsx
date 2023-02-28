@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header.jsx';
-import MovieCard from '../components/MovieCard.jsx';
+import MovieCard from "../components/MovieCard.jsx";
 import tmdbGetApi from '../tmdb-helpers/tmdb.endpoints.js';
 import CardSkeletonUI from '../components/SkeletonUI/CardSkeletonUI'
 export default function Home() {

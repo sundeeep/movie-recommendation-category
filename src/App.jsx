@@ -17,7 +17,7 @@ function App() {
           <Route path='/discover' element={<Discover />}/>
           <Route path='/dashboard' element={<Dashboard />} />
         </Route>
-        <Route path='/top-rated' element={<TopRated />}/>
+        <Route path='/top-rated' element={<TopRated />} />
       </Routes>
     </BrowserRouter>
   )
