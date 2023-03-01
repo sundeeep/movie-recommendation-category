@@ -16,8 +16,8 @@ export default function TopRated() {
 
     const tmdb = new tmdbGetApi();
     const fetchAllTopRatedMovies = async () => {
-        const data = await tmdb.getAllList("movie", "top_rated", 322);
-        console.log(data?.results);
+        const data = await tmdb.getAllList("movie", "top_rated", 500);
+        // console.log(data?.results);
         setMovies(data?.results);
         setIsMoviesLoading(false);        
     }
@@ -33,7 +33,7 @@ export default function TopRated() {
                 <img className="h-[100%] w-[100%] object-cover contrast-125 -z-20" src={`https://image.tmdb.org/t/p/original/tmU7GeKVybMWFButWEGl2M4GeiP.jpg`} alt="Banner Image" />
             </div>
 
-            <MovieListing movies={movies} isMoviesLoading={isMoviesLoading} setIsMoviesLoading={setIsMoviesLoading}/>
+            <MovieListing movies={movies} isMoviesLoading={isMoviesLoading} skeletonsCount={20}/>
 
         </div>
     )
