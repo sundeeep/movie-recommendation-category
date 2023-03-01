@@ -26,7 +26,7 @@ function MovieListing({setBackdrop, movies, isMoviesLoading, skeletonsCount}) {
             <div id="slider" className='p-5 flex items-center gap-5 overflow-x-scroll scroll scroll-smooth scrollbar-hide'>
                 {isMoviesLoading
                     ? skeletons.map((_, i) => <div key={i}><CardSkeletonUI /></div>)
-                    :movies?.map(movie => (
+                    :movies?.filter((movie) => movie?.poster_path).map((movie) => (
                         <Link key={movie?.id} to={`/top-rated/${movie?.id}`} className="">
                             <MovieCard backdrop={movie?.backdrop_path} setBackdrop={setBackdrop} poster={movie?.poster_path} name={movie?.original_title} date={movie?.release_date} popularity={movie?.popularity} votes={movie?.vote_count} votesAvg={movie?.vote_average}/>
                         </Link>

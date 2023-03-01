@@ -20,7 +20,7 @@ export default function TMDBCategory() {
 
     const tmdb = new tmdbGetApi();
     const fetchAllTopRatedMovies = async () => {
-        const data = await tmdb.getAllList("movie", category, 100);
+        const data = await tmdb.getAllList("movie", "upcoming", 20);
         console.log(data?.results);
         setMovies(data?.results);
         setIsMoviesLoading(false);        
@@ -33,7 +33,7 @@ export default function TMDBCategory() {
             </header>
 
             <Banner backdropImage={backdropImage}/>
-
+            
             <MovieListing setBackdrop={setBackdropImage} movies={movies} isMoviesLoading={isMoviesLoading} skeletonsCount={20}/>
         </div>
     )
