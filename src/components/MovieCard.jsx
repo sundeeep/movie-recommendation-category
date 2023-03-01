@@ -17,14 +17,14 @@ export default function MovieCard({
 
   return (
     <article className="relative h-[250px] w-[170px] rounded-md z-30">
-      
+
       <div className="rounded-md h-[100%] w-[100%] object-cover">
         <div className="absolute inset-0 blur">
           <CardSkeletonUI />
         </div>
         <img key={poster} 
           src={`https://image.tmdb.org/t/p/original${poster}`}
-          className="absolute z-40 hover:scale-105 hover:border hover:border-4 hover:border-red-500/50 transition-all ease-in-out duration-300 cursor-pointer rounded-md h-[100%] w-[100%] object-cover"
+          className="absolute z-40 hover:scale-105 hover:border border-4 hover:border-red-500/50 transition-all ease-in-out duration-300 cursor-pointer rounded-md h-[100%] w-[100%] object-cover"
           alt="" />
       </div>
 

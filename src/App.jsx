@@ -1,10 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import TopRated from './routes/TopRated';
-import Upcoming from './routes/Upcoming';
-import Popular from './routes/Popular';
-import Discover from './routes/Discover';
-import Dashboard from './routes/Dashboard';
 
 function App() {
 
