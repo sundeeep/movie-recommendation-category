@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import tmdbGetApi from '../tmdb-helpers/tmdb.endpoints.js';
-import CardSkeletonUI from '../components/SkeletonUI/CardSkeletonUI';
 import MovieListing from '../components/MovieListing';
 
-export default function TopRated() {
+export default function TMDBCategory() {
 
     const [movies, setMovies] = useState(null);
     const [isMoviesLoading, setIsMoviesLoading] = useState(true);
 
+    const {category} = useParams();
+    console.log(category)
+
     useEffect(()=>{
         fetchAllTopRatedMovies();
-    },[])
+    },[category])
 
     const tmdb = new tmdbGetApi();
     const fetchAllTopRatedMovies = async () => {
-        const data = await tmdb.getAllList("movie", "top_rated", 110);
+        const data = await tmdb.getAllList("movie", category, 100);
         console.log(data?.results);
         setMovies(data?.results);
         setIsMoviesLoading(false);        

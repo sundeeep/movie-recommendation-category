@@ -14,7 +14,8 @@ export default function Header() {
                 </Link>
                 <nav className=''>
                     <ul className='flex items-center gap-9'>
-                        <Link className="uppercase text-white text-sm font-medium" to='/top-rated'>Top Rated</Link>
+                        <Link className="uppercase text-white text-sm font-medium" to='/top_rated'>Top Rated</Link>
+                        <Link className="uppercase text-white text-sm font-medium" to='/popular'>Popular</Link>
                     </ul>
                 </nav>
             </div>

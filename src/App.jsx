@@ -1,14 +1,18 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
-import TopRated from './routes/TopRated';
+import TMDBCategory from './routes/TMDBCategory';
 
 function App() {
+  const [categories, setCategories] = useState(["top_rated", "popular"])
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/top-rated' element={<TopRated />} />
+        {categories.map((category, index) => (
+          <Route key={index} path={`/:category`} element={<TMDBCategory />}/>
+        ))}
       </Routes>
     </BrowserRouter>
   )
