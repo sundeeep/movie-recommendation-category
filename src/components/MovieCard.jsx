@@ -19,7 +19,7 @@ export default function MovieCard({
 
   const handleChangeBackdrop = () => {
     // console.log("Hover");
-    // console.log(backdrop);
+    console.log(backdrop);
     setBackdrop(backdrop);
   }
 

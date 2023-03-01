@@ -5,7 +5,7 @@ import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
 
 export default function Header() {
     return (
-        <div className='max-w-[90%] w-[98%] mx-auto flex items-center justify-between text-white'>
+        <div className='max-w-[90%] w-[98%] mx-auto flex items-center justify-between text-white z-30'>
             <div className='flex items-center gap-16'>
                 <Link to='/' className='text-3xl uppercase'>
                     <span className='text-[#E21717] font-[800]'>Movie</span>
@@ -14,8 +14,8 @@ export default function Header() {
                 </Link>
                 <nav className=''>
                     <ul className='flex items-center gap-9'>
-                        <Link className="uppercase text-white text-sm font-medium" to='/top_rated'>Top Rated</Link>
-                        <Link className="uppercase text-white text-sm font-medium" to='/popular'>Popular</Link>
+                        <Link className="uppercase text-white text-sm font-bold" to='/top_rated'>Top Rated</Link>
+                        <Link className="uppercase text-white text-sm font-bold" to='/popular'>Popular</Link>
                     </ul>
                 </nav>
             </div>
