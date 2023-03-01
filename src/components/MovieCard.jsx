@@ -7,6 +7,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import CardSkeletonUI from "./SkeletonUI/CardSkeletonUI";
 
 export default function MovieCard({
+  backdrop,
+  setBackdrop,
   poster,
   name,
   date,
@@ -15,14 +17,20 @@ export default function MovieCard({
   votesAvg,
 }) {
 
+  const handleChangeBackdrop = () => {
+    // console.log("Hover");
+    // console.log(backdrop);
+    setBackdrop(backdrop);
+  }
+
   return (
-    <article className="relative h-[250px] w-[170px] rounded-md z-30">
+    <article onMouseOver={handleChangeBackdrop} className="relative h-[250px] w-[170px] rounded-md z-30">
 
       <div className="rounded-md h-[100%] w-[100%] object-cover">
         <div className="absolute inset-0 blur">
           <CardSkeletonUI />
         </div>
-        <img key={poster} 
+        <img key={poster}
           src={`https://image.tmdb.org/t/p/original${poster}`}
           className="absolute z-40 hover:scale-105 hover:border border-4 hover:border-red-500/50 transition-all ease-in-out duration-300 cursor-pointer rounded-md h-[100%] w-[100%] object-cover"
           alt="" />
