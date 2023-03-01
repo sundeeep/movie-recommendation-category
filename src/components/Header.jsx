@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
+import { routing_config } from '../App';
 
 export default function Header() {
     return (
@@ -14,8 +15,9 @@ export default function Header() {
                 </Link>
                 <nav className=''>
                     <ul className='flex items-center gap-9'>
-                        <Link className="uppercase text-white text-sm font-bold" to='/top_rated'>Top Rated</Link>
-                        <Link className="uppercase text-white text-sm font-bold" to='/popular'>Popular</Link>
+                        {routing_config.map((route) => (
+                            <Link key={route.id} className="uppercase text-white text-sm font-bold" to={route.path}>{route.nav_title}</Link>
+                        ))}
                     </ul>
                 </nav>
             </div>
