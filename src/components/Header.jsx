@@ -14,9 +14,6 @@ export default function Header() {
                 </Link>
                 <nav className=''>
                     <ul className='flex items-center gap-9'>
-                        <Link className="uppercase text-white text-sm font-medium" to='/dashboard'>Dashboard</Link>
-                        <Link className="uppercase text-white text-sm font-medium" to='/discover'>Discover</Link>
-                        <Link className="uppercase text-white text-sm font-medium" to='/popular'>Popular</Link>
                         <Link className="uppercase text-white text-sm font-medium" to='/top-rated'>Top Rated</Link>
                     </ul>
                 </nav>

@@ -17,6 +17,7 @@ export default function MovieCard({
 
   return (
     <article className="relative h-[250px] w-[170px] rounded-md z-30">
+      
       <div className="rounded-md h-[100%] w-[100%] object-cover">
         <div className="absolute inset-0 blur">
           <CardSkeletonUI />
