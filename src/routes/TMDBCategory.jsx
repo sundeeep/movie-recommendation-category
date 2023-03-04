@@ -20,7 +20,7 @@ export default function TMDBCategory() {
 
     const tmdb = new tmdbGetApi();
     const fetchAllTopRatedMovies = async () => {
-        const data = await tmdb.getAllList("movie", category, 20);
+        const data = await tmdb.getAllList("movie", category, 3);
         console.log(data?.results);
         setMovies(data?.results);
         setIsMoviesLoading(false);        
